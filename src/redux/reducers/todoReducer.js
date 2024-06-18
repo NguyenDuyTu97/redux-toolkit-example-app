@@ -10,7 +10,6 @@ const todoReducer = createReducer(initialState, (builder) => {
     console.log(action, "action");
   });
   builder.addCase(changeProvince, (state, action) => {
-    // console.log(action, "action");
     state.list[0].address.province = "HN";
   });
 });
