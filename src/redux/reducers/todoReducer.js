@@ -13,5 +13,4 @@ const todoReducer = createReducer(initialState, (builder) => {
     state.list[0].address.province = "HN";
   });
 });
-
 export { todoReducer, addItem, changeProvince };

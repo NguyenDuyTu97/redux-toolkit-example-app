@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, createAction } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
@@ -13,6 +13,8 @@ const initialState: CounterState = {
   entities: [],
   loading: "idle",
 };
+
+const resetValue = createAction('resetValue');
 
 export const fetchUserById = createAsyncThunk(
   "users/fetchByIdStatus",
@@ -67,6 +69,9 @@ export const counterSlice = createSlice({
     });
     builder.addCase(fetchUserById.rejected, (state, action) => {
       console.log(action, "action rejected");
+    });
+    builder.addCase(resetValue, (state, action) => {
+      state.value = 0;
     });
   },
 });

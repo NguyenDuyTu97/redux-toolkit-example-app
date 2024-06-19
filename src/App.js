@@ -7,9 +7,11 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Counter />
       <Dashboard />
-      <ToastContainer />
+
+      {/* <Counter />
+      <Dashboard />
+      <ToastContainer /> */}
     </div>
   );
 }

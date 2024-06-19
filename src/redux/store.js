@@ -1,10 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./reducers/counterSlice";
+import cartReducer from "./reducers/cartSlice";
+import dashboardReducer from "./reducers/dashboardSlice";
 import logger from "redux-logger";
 import { todoReducer } from "./reducers/todoReducer";
 
 export const store = configureStore({
-  reducer: { counter: counterReducer, todo: todoReducer },
+  reducer: {
+    dashboard: dashboardReducer,
+    counter: counterReducer,
+    cart: cartReducer,
+
+    todo: todoReducer,
+  },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
