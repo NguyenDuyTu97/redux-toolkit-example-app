@@ -3,6 +3,7 @@ import Dashboard from "@pages/dashboard";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
+import 'rsuite/dist/rsuite.min.css';
 
 function App() {
   return (

@@ -33,7 +33,10 @@ export const dashboardSlice = createSlice({
 
 export const { test1 } = dashboardSlice.actions;
 
+// selector
+export const getProducts = (state: RootState) => state.dashboard.products;
+
 export default dashboardSlice.reducer;
 
 
-export const getProducts = (state: RootState) => state.dashboard.products;
+
