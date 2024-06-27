@@ -1,7 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { decrement, resetValue } from "./counterSlice";
 
 const initialState = {
-    products: [],
+  products: [],
+  value: 0,
 };
 
 export const fetchProducts = createAsyncThunk(
@@ -28,6 +30,12 @@ export const dashboardSlice = createSlice({
       builder.addCase(fetchProducts.fulfilled, (state, action) => {
         state.products= [...action.payload];
       });
+      // builder.addCase(resetValue, (state, action) => {
+      //   state.value = -2;
+      // });
+      // builder.addCase(decrement, (state, action) => {
+      //   state.value += 2;
+      // });
     },
 });
 

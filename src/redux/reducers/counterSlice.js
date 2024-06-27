@@ -14,7 +14,7 @@ const initialState: CounterState = {
   loading: "idle",
 };
 
-const resetValue = createAction('resetValue');
+export const resetValue = createAction('resetValue');
 
 export const fetchUserById = createAsyncThunk(
   "users/fetchByIdStatus",
@@ -22,7 +22,7 @@ export const fetchUserById = createAsyncThunk(
     console.log(thunkAPI, "thunkAPI of thunk 1");
 
     const isEvenNumber = Math.round(Math.random() * 6) % 2 === 0;
-    if (isEvenNumber) {
+    if (true) {
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/users/${userId}`
       );
@@ -59,7 +59,7 @@ export const counterSlice = createSlice({
     },
     incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload;
-    },
+    }
   },
   extraReducers: (builder) => {
     // Add reducers for additional action types here, and handle loading state as needed

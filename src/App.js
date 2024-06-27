@@ -8,11 +8,10 @@ import 'rsuite/dist/rsuite.min.css';
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      {/* <Dashboard /> */}
 
-      {/* <Counter />
-      <Dashboard />
-      <ToastContainer /> */}
+      <Counter />
+      {/* <ToastContainer /> */}
     </div>
   );
 }
